@@ -6,7 +6,6 @@ import { provideTodoApi } from '@evs-test/evs-test-data-access';
 import { environment } from '../environments/environment';
 import { appRoutes } from './app.routes';
 
-
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),

@@ -3,8 +3,12 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/features/todo/src",
   "projectType": "library",
-  "tags": [],
-  "implicitDependencies": ["evs-test-data-access", "api-models", "ui-components"],
+  "tags": ["front:feature"],
+  "implicitDependencies": [
+    "evs-test-data-access",
+    "api-models",
+    "ui-components"
+  ],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",

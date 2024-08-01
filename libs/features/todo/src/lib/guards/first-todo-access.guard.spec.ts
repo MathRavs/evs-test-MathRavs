@@ -5,7 +5,6 @@ import { TodoStore } from '../store';
 import { firstTodoAccessGuard } from './first-todo-access.guard';
 
 describe('firstTodoAccessGuard', () => {
-
   let todoStore: TodoStore;
 
   beforeEach(async () => {
@@ -14,14 +13,14 @@ describe('firstTodoAccessGuard', () => {
         TodoStore,
         {
           provide: TodoApiAbstract,
-          useClass: TodoApiMock
-        }
-      ]
+          useClass: TodoApiMock,
+        },
+      ],
     }).compileComponents();
 
     todoStore = TestBed.inject(TodoStore);
-  })
-  
+  });
+
   it('should load the data on the first access', () => {
     const loadSpy = jest.spyOn(todoStore, 'load');
 
@@ -31,6 +30,6 @@ describe('firstTodoAccessGuard', () => {
 
       firstTodoAccessGuard();
       expect(loadSpy).toHaveBeenCalledTimes(1);
-    })
-  })
+    });
+  });
 });

@@ -1,3 +1,3 @@
 export const AppRoutesEnum = {
-  TODO: 'taches'
+  TODO: 'taches',
 } as const;

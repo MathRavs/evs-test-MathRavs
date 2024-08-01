@@ -4,7 +4,7 @@
   "sourceRoot": "libs/data-access/src",
   "prefix": "lib",
   "projectType": "library",
-  "tags": [],
+  "tags": ["front:data-access"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",
@@ -12,9 +12,6 @@
       "options": {
         "jestConfig": "libs/data-access/jest.config.ts"
       }
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint"
     }
   }
 }

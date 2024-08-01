@@ -7,12 +7,10 @@ import { CardComponent } from '@evs-test/ui-components';
   host: {
     class: 'flex flex-col gap-[8px]',
   },
-  imports: [
-    CardComponent
-  ],
+  imports: [CardComponent],
   selector: 'evs-todo-todo-list',
   standalone: true,
-  templateUrl: './todo-list.component.html'
+  templateUrl: './todo-list.component.html',
 })
 export class TodoListComponent {
   todoList = input.required<TodoModel[]>();

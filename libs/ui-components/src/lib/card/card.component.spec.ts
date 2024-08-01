@@ -10,8 +10,8 @@ import { CardComponent } from './card.component';
   template: '<ui-card [title]="title" [description]="description"></ui-card>',
 })
 class TestWrapperComponent {
-  @Input({required: true}) title!: string;
-  @Input({required: true}) description!: string;
+  @Input({ required: true }) title!: string;
+  @Input({ required: true }) description!: string;
 }
 
 describe('CardComponent', () => {
@@ -33,7 +33,13 @@ describe('CardComponent', () => {
     component.description = 'description';
     fixture.detectChanges();
 
-    expect(fixture.debugElement.query(By.css('[data-test-id="description"]')).nativeElement.textContent).toEqual(component.description);
-    expect(fixture.debugElement.query(By.css('[data-test-id="title"]')).nativeElement.textContent).toEqual(component.title);
+    expect(
+      fixture.debugElement.query(By.css('[data-test-id="description"]'))
+        .nativeElement.textContent
+    ).toEqual(component.description);
+    expect(
+      fixture.debugElement.query(By.css('[data-test-id="title"]')).nativeElement
+        .textContent
+    ).toEqual(component.title);
   });
 });

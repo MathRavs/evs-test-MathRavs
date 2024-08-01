@@ -1,1 +1,8 @@
 node_modules
+tmp
+dist
+.vscode
+.nx
+.idea
+.husky
+.angular

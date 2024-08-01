@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
 import { TodoApiAbstract } from '../abstract';
 import { BASE_URL_TOKEN } from '../injection-tokens';
 
-
 @Injectable()
 export class TodoApiService extends TodoApiAbstract {
   private readonly httpClient = inject(HttpClient);
@@ -33,5 +32,4 @@ export class TodoApiService extends TodoApiAbstract {
   getTodos(): Observable<TodoModel[]> {
     return this.httpClient.get<TodoModel[]>(this.baseUrl);
   }
-  
 }

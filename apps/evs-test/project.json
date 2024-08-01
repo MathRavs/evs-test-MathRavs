@@ -4,7 +4,7 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/evs-test/src",
-  "tags": [],
+  "tags": ["front:app"],
   "implicitDependencies": ["ui-components", "evs-test-feature-todo"],
   "targets": {
     "build": {
@@ -17,9 +17,7 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/evs-test/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/evs-test/src/assets"
-        ],
+        "assets": ["apps/evs-test/src/assets"],
         "styles": ["apps/evs-test/src/styles.scss"],
         "scripts": []
       },
@@ -27,8 +25,8 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "src/environments/environment.ts",
-              "with": "src/environments/environment.prod.ts"
+              "replace": "apps/evs-test/src/environments/environment.ts",
+              "with": "apps/evs-test/src/environments/environment.prod.ts"
             }
           ],
           "budgets": [

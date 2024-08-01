@@ -1,18 +1,17 @@
+@if (error$(); as error){
+<div uiAlertBlock class="bg-red-500">
+  <p class="text-white">{{ error }}</p>
+</div>
+<button uiActionButton (click)="reload()" class="w-full">Recharger</button>
+} @else {
 <div class="flex justify-between items-center mb-[15px]">
-  <h1 class="font-bold text-2xl ">Liste des tâches</h1>
+  <h1 class="font-bold text-2xl">Liste des tâches</h1>
   <a [routerLink]="managementPageLink">
-    <button type="button" class="hover:brightness-75 transition-all px-[12px] py-[4px] font-semibold text-sm bg-orange-400 text-white rounded-xl shadow-lg">
-      Ajouter
-    </button>
+    <button type="button" uiActionButton>Ajouter</button>
   </a>
 </div>
-@if (loading$$()){
-    <div class="loading-content">
-      En cours de chargement ...
-    </div>
-}
-@else {
-  @if (todos$$(); as todos){
-    <evs-todo-todo-list [todoList]="todos"></evs-todo-todo-list>
-  }
-}
+} @if (loading$$()){
+<div class="loading-content">En cours de chargement ...</div>
+} @else { @if (todos$$(); as todos){
+<evs-todo-todo-list [todoList]="todos"></evs-todo-todo-list>
+} }

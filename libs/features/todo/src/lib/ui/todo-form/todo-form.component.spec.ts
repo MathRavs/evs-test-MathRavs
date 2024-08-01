@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+
 import { TodoFormComponent } from './todo-form.component';
 
 describe('TodoFormComponent', () => {
@@ -15,7 +16,16 @@ describe('TodoFormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  describe('create todo', () => {
+    it('should create todo', () => {
+      const spy = jest.spyOn(component.todoCreated, 'emit');
+      const expectedValues = {
+        description: 'test',
+        title: 'test',
+      };
+      component.form.patchValue(expectedValues);
+      component.createTodo();
+      expect(spy).toHaveBeenCalledWith(expectedValues);
+    });
   });
 });

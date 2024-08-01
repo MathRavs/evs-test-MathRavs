@@ -4,8 +4,8 @@ import cors from 'cors';
 import express from 'express';
 import { v4 as uuidv4 } from 'uuid';
 
-const host = process.env.HOST ?? 'localhost';
-const port = process.env.PORT ? Number(process.env.PORT) : 3000;
+const host = process.env.HOST ?? '0.0.0.0';
+const port = process.env.PORT ? Number(process.env.PORT) : 8000;
 
 const app = express();
 app.use(bodyParser.json());
@@ -29,7 +29,6 @@ app.post(`/${baseApiUrl}/${baseResourceUrl}`, (req, res) => {
   todos.push(newItem);
   res.status(201).json(newItem);
 });
-
 
 app.listen(port, host, () => {
   /* eslint-disable no-console */

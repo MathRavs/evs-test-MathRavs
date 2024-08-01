@@ -4,5 +4,5 @@
   "sourceRoot": "libs/api-models/src",
   "prefix": "lib",
   "projectType": "library",
-  "tags": []
+  "tags": ["shared:models"]
 }

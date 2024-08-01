@@ -4,8 +4,8 @@ import { TodoStore } from '../store';
 
 export const firstTodoAccessGuard = (): boolean => {
   const todoStore = inject(TodoStore);
-  if(!todoStore.state.todos()){
+  if (!todoStore.state.todos()) {
     todoStore.load(undefined);
   }
   return true;
-}
+};

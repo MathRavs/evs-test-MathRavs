@@ -1,0 +1,26 @@
+{
+	"info": {
+		"_postman_id": "534d1d3e-dc32-44a2-8b14-7a32a3a1892d",
+		"name": "evs test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9904156"
+	},
+	"item": [
+		{
+			"name": "get list",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "add item",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

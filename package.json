@@ -1,12 +1,16 @@
 {
-  "name": "@evs-test",
+  "name": "evs-front",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test",
-    "commit": "cz"
+    "lint": "nx lint",
+    "test": "nx run-many -t=test",
+    "commit": "cz",
+    "eslint": "eslint --fix .",
+    "prettier": "prettier --write .",
+    "docker": "docker-compose up"
   },
   "private": true,
   "dependencies": {
@@ -94,9 +98,6 @@
     "{apps,libs}/**/*.{html,ts}": "eslint --fix",
     "*.{css,scss}": "stylelint --fix",
     "*.{js,ts,css,scss,json,yml,md,sh}": "prettier --write"
-  },
-  "nx": {
-    "includedScripts": []
   },
   "config": {
     "commitizen": {
