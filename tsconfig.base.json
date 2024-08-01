@@ -17,7 +17,9 @@
     "paths": {
       "@evs-test/api-models": ["libs/api-models/src/index.ts"],
       "@evs-test/evs-test-data-access": ["libs/data-access/src/index.ts"],
-      "@evs-test/front/*": ["apps/evs-test/src/app/*"]
+      "@evs-test/front/*": ["apps/evs-test/src/app/*"],
+      "@evs-test/todo": ["libs/features/todo/src/index.ts"],
+      "@evs-test/ui-components": ["ui-components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

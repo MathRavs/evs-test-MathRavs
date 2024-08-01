@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [RouterModule],
+  imports: [RouterModule, RouterOutlet],
   selector: 'evs-front-root',
   standalone: true,
   styleUrl: './app.component.scss',

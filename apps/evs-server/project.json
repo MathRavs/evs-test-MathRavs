@@ -4,6 +4,7 @@
   "sourceRoot": "apps/evs-server/src",
   "projectType": "application",
   "tags": [],
+  "implicitDependencies": ["api-models"],
   "targets": {
     "build": {
       "executor": "@nx/esbuild:esbuild",

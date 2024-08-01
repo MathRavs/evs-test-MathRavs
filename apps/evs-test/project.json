@@ -5,6 +5,7 @@
   "prefix": "app",
   "sourceRoot": "apps/evs-test/src",
   "tags": [],
+  "implicitDependencies": ["ui-components", "evs-test-feature-todo"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
