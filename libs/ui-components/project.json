@@ -2,7 +2,6 @@
   "name": "ui-components",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui-components/src",
-  "prefix": "lib",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -10,7 +9,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "ui-components/jest.config.ts"
+        "jestConfig": "libs/ui-components/jest.config.ts"
       }
     },
     "lint": {

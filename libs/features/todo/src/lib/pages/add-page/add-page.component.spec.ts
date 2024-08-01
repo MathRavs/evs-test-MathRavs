@@ -1,7 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AddUpdatePageComponent } from './add-update-page.component';
 
-describe('AddUpdatePageComponent', () => {
+import { AddUpdatePageComponent } from './add-page.component';
+
+describe('AddPageComponent', () => {
   let component: AddUpdatePageComponent;
   let fixture: ComponentFixture<AddUpdatePageComponent>;
 

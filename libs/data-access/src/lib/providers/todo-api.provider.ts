@@ -9,8 +9,10 @@ export const provideBaseUrl = (baseUrl: string): Provider => ({
   useValue: baseUrl
 });
 
-export const provideTodoApi = (baseUrl: string): Provider[] => [{
-  provide: TodoApiAbstract,
-  useClass: TodoApiService
-}, provideBaseUrl(baseUrl)];
+export const provideTodoApi = (baseUrl: string): Provider[] => {
+  return [{
+    provide: TodoApiAbstract,
+    useClass: TodoApiService
+  }, provideBaseUrl(baseUrl)];
+};
 

@@ -1,18 +1,14 @@
 <div class="flex justify-between items-center mb-[15px]">
   <h1 class="font-bold text-2xl ">Liste des tâches</h1>
-  <a [routerLink]="managementPageLink">
+  <a [routerLink]="listPageLink">
     <button type="button" class="hover:brightness-75 transition-all px-[12px] py-[4px] font-semibold text-sm bg-orange-400 text-white rounded-xl shadow-lg">
-      Ajouter
+      Liste des tâches
     </button>
   </a>
 </div>
 @if (loading$$()){
-    <div class="loading-content">
-      En cours de chargement ...
-    </div>
+  <div class="loading-content">
+    En cours de chargement ...
+  </div>
 }
-@else {
-  @if (todos$$(); as todos){
-    <evs-todo-todo-list [todoList]="todos"></evs-todo-todo-list>
-  }
-}
+@else {}

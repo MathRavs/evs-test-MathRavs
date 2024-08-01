@@ -1,0 +1,7 @@
+@if (todoList().length){
+  @for (todoItem of todoList(); track todoItem.id){
+    <ui-card [title]="todoItem.title" [description]="todoItem.description"></ui-card>
+  }
+} @else {
+  <p data-test-id="empty-text" class="w-full p-lg flex justify-center items-center">Pas encore d'éléments</p>
+}

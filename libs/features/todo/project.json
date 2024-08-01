@@ -2,7 +2,6 @@
   "name": "evs-test-feature-todo",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/features/todo/src",
-  "prefix": "lib",
   "projectType": "library",
   "tags": [],
   "implicitDependencies": ["evs-test-data-access", "api-models", "ui-components"],
