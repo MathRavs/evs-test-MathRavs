@@ -1,17 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 
-import { AddUpdatePageComponent } from './add-page.component';
+import { AddPageComponent } from './add-page.component';
+
 
 describe('AddPageComponent', () => {
-  let component: AddUpdatePageComponent;
-  let fixture: ComponentFixture<AddUpdatePageComponent>;
+  let component: AddPageComponent;
+  let fixture: ComponentFixture<AddPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AddUpdatePageComponent],
+      imports: [AddPageComponent],
+      providers: [
+        provideRouter([]),
+      ]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AddUpdatePageComponent);
+    fixture = TestBed.createComponent(AddPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

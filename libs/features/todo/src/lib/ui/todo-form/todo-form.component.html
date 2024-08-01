@@ -1,0 +1,30 @@
+@let shouldDisplayRedAlert = form.invalid;
+<form (ngSubmit)="createTodo()" [formGroup]="form" class="w-full flex flex-col gap-[10px] p-[5px]">
+    <div class="w-full flex flex-col gap-[5px]">
+      <label for="title">Titre</label>
+      <input id="title"
+             [class.border-red-500]="form.controls.title.touched && form.controls.title.invalid"
+             class="outline-0 p-[5px] rounded-lg border-2 transition-colors" formControlName="title" />
+    </div>
+    <div class="w-full flex flex-col gap-[5px]">
+      <label for="description">Description</label>
+      <textarea
+        [ngClass]="{'!border-red-500': form.controls.description.touched && form.controls.description.invalid}"
+        class="resize-none outline-0 p-[5px] rounded-lg border-2 transition-colors" id="description" formControlName="description"></textarea>
+    </div>
+      <div [ngClass]="{'!bg-green-500': !shouldDisplayRedAlert}"
+           class="p-[15px] flex justify-center items-center bg-red-500 rounded-lg">
+        <p class="text-white">
+          @if(shouldDisplayRedAlert){
+            Les deux champs titre et description sont obligatoires
+          } @else {
+            Tous les champs sont valides
+          }
+        </p>
+      </div>
+    <button
+      [disabled]="form.invalid"
+      class="w-full disabled:pointer-events-none disabled:bg-slate-400 hover:brightness-75 transition-all px-[12px] py-[6px] font-semibold text-sm bg-orange-400 text-white rounded-xl shadow-lg">
+      Ajouter
+    </button>
+</form>

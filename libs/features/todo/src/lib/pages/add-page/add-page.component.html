@@ -1,5 +1,5 @@
 <div class="flex justify-between items-center mb-[15px]">
-  <h1 class="font-bold text-2xl ">Liste des tâches</h1>
+  <h1 class="font-bold text-2xl ">Ajouter une tâche</h1>
   <a [routerLink]="listPageLink">
     <button type="button" class="hover:brightness-75 transition-all px-[12px] py-[4px] font-semibold text-sm bg-orange-400 text-white rounded-xl shadow-lg">
       Liste des tâches
@@ -11,4 +11,6 @@
     En cours de chargement ...
   </div>
 }
-@else {}
+@else {
+  <evs-todo-todo-form (todoCreated)="createTodo($event)" class="w-full"></evs-todo-todo-form>
+}
