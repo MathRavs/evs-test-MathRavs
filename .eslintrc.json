@@ -1,46 +1,64 @@
 {
-  "root": true,
-  "ignorePatterns": ["libs/api-client/lib/**/*", "**/*"],
-  "plugins": ["@nx"],
-  "overrides": [
-    {
-      "files": ["*.ts", "*.js"],
-      "extends": ["plugin:perfectionist/recommended-alphabetical"],
-      "rules": {
-        "perfectionist/sort-classes": "off",
-        "no-console": "error",
-        "@typescript-eslint/explicit-function-return-type": "error",
-        "@nx/enforce-module-boundaries": [
-          "error",
-          {
-            "allowCircularSelfDependency": true,
-            "enforceBuildableLibDependency": true,
-            "allow": [],
-            "depConstraints": [
-              {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "files": ["*.ts"],
-      "extends": ["plugin:@nx/typescript"],
-      "rules": {
-        "@typescript-eslint/no-extra-semi": "error",
-        "no-extra-semi": "off"
-      }
-    },
-    {
-      "files": ["*.js"],
-      "extends": ["plugin:@nx/javascript"],
-      "rules": {
-        "@typescript-eslint/no-extra-semi": "error",
-        "no-extra-semi": "off"
-      }
-    }
-  ]
+    "root": true,
+    "ignorePatterns": ["**/*"],
+    "plugins": ["@nx"],
+    "overrides": [
+        {
+            "files": ["*.ts"],
+            "extends": ["plugin:perfectionist/recommended-alphabetical"],
+            "rules": {
+                "perfectionist/sort-classes": "off",
+                "no-console": "error",
+                "@typescript-eslint/explicit-function-return-type": "error",
+                "@nx/enforce-module-boundaries": [
+                    "error",
+                    {
+                        "allowCircularSelfDependency": true,
+                        "enforceBuildableLibDependency": true,
+                        "allow": [],
+                        "depConstraints": [
+                            {
+                                "sourceTag": "*",
+                                "onlyDependOnLibsWithTags": ["*"]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["*.ts"],
+            "extends": ["plugin:@nx/typescript"],
+            "rules": {
+                "@typescript-eslint/no-extra-semi": "error",
+                "no-extra-semi": "off"
+            }
+        },
+        {
+            "files": ["*.js"],
+            "extends": ["plugin:@nx/javascript"],
+            "rules": {
+                "@typescript-eslint/no-extra-semi": "error",
+                "no-extra-semi": "off",
+                "no-console": "error"
+            }
+        },
+        {
+            "files": ["*.spec.ts"],
+            "plugins": ["jest"],
+            "extends": ["plugin:jest/recommended"],
+            "rules": {
+                "jest/no-disabled-tests": "warn",
+                "jest/no-focused-tests": "error",
+                "jest/no-identical-title": "error",
+                "jest/expect-expect": [
+                    "error",
+                    {
+                        "assertFunctionNames": ["expect"],
+                        "additionalTestBlockFunctions": []
+                    }
+                ]
+            }
+        }
+    ]
 }
