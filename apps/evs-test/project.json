@@ -1,9 +1,9 @@
 {
   "name": "evs-test",
-  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "./src",
+  "sourceRoot": "apps/evs-test/src",
   "tags": [],
   "targets": {
     "build": {
@@ -11,10 +11,10 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/evs-test",
-        "index": "./src/index.html",
-        "browser": "./src/main.ts",
+        "index": "apps/evs-test/src/index.html",
+        "browser": "apps/evs-test/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "tsconfig.app.json",
+        "tsConfig": "apps/evs-test/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
@@ -22,7 +22,7 @@
             "input": "public"
           }
         ],
-        "styles": ["./src/styles.scss"],
+        "styles": ["apps/evs-test/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -70,14 +70,14 @@
     "lint": {
       "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": ["./src"]
+        "lintFilePatterns": ["apps/evs-test/src"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectName}"],
       "options": {
-        "jestConfig": "jest.config.ts"
+        "jestConfig": "apps/evs-test/jest.config.ts"
       }
     },
     "serve-static": {
