@@ -42,6 +42,23 @@
                 "no-extra-semi": "off",
                 "no-console": "error"
             }
+        },
+        {
+            "files": ["*.spec.ts"],
+            "plugins": ["jest"],
+            "extends": ["plugin:jest/recommended"],
+            "rules": {
+                "jest/no-disabled-tests": "warn",
+                "jest/no-focused-tests": "error",
+                "jest/no-identical-title": "error",
+                "jest/expect-expect": [
+                    "error",
+                    {
+                        "assertFunctionNames": ["expect"],
+                        "additionalTestBlockFunctions": []
+                    }
+                ]
+            }
         }
     ]
 }

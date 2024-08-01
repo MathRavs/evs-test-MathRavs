@@ -15,6 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@evs-test/api-models": ["libs/api-models/src/index.ts"],
+      "@evs-test/evs-test-data-access": ["libs/data-access/src/index.ts"],
       "@evs-test/front/*": ["apps/evs-test/src/app/*"]
     }
   },
