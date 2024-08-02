@@ -6,7 +6,7 @@
 - Ngrx signal store
 
 ## Quality
-- a library based modular architecture with strict boundaries between them
+- a library based modular architecture with strict boundaries between the libraries and apps 
 
 ![dependency graph](graph.png "Dependency graph")
 
