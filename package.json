@@ -10,7 +10,8 @@
     "commit": "cz",
     "eslint": "eslint --fix .",
     "prettier": "prettier --write .",
-    "docker": "docker-compose up"
+    "docker": "docker-compose up",
+    "prepare": "husky"
   },
   "private": true,
   "dependencies": {
@@ -77,6 +78,7 @@
     "eslint-plugin-jest": "^28.6.0",
     "eslint-plugin-perfectionist": "^2.8.0",
     "husky": "^8.0.0",
+    "lint-staged": "^15.2.10",
     "jest": "^29.4.1",
     "jest-environment-jsdom": "^29.4.1",
     "jest-environment-node": "^29.4.1",
